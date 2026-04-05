@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+}
+
+/* VIDEO BACKGROUND */
+#bg-video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+/* THEMES */
+.space-theme {
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+    url("../images/space.jpg");
+    background-size: cover;
+}
+
+.corruption-theme {
+    background:
+    linear-gradient(rgba(50,0,0,0.7), rgba(0,0,0,0.9)),
+    url("../images/corruption.jpg");
+    background-size: cover;
+}
+
+/* CONTENT BOX */
+.content {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1.2s;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* CARD */
+.card {
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px cyan;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1;}
+}
